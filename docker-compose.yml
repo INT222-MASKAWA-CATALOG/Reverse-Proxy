@@ -18,5 +18,3 @@ networks:
           name: intregrated-network
     intregrated-network:
       external: true
-    app_subnet:
-      external: true
