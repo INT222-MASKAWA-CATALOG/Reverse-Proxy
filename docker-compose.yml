@@ -10,7 +10,6 @@ services:
             - "80:80"
     networks:
       intregrated-network:
-        ipv4_address: 172.18.0.5
 
 networks:
     default:
