@@ -13,8 +13,5 @@ services:
         ipv4_address: 172.18.0.5
 
 networks:
-  default:
-    external:
-      name: intregrated-network
   intregrated-network:
     external: true
