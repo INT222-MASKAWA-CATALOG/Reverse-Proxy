@@ -13,9 +13,9 @@ services:
         ipv4_address: 172.18.0.5
 
 networks:
-  default:
+  intregrated-network:
+    external: true
     ipam:
       config:
         - subnet: 172.18.0.0/16
-  intregrated-network:
-    external: true
+          gateway: 172.18.0.1
