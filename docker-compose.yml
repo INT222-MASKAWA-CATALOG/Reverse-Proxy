@@ -17,4 +17,4 @@ networks:
        external:
           name: intregrated-network
     intregrated-network:
-      external: true
+        external: true
