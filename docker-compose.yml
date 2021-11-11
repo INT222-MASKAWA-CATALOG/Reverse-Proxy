@@ -14,7 +14,7 @@ services:
 
 networks:
     default:
-       external:
+        external:
           name: intregrated-network
     intregrated-network:
         external: true
