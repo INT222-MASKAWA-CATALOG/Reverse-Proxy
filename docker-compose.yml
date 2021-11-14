@@ -5,7 +5,16 @@ services:
     build: .
     image: nginx
     volumes:
-    - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    # - /home/Maskawa/Reverse-Proxy/https/nginx/data:/usr/share/nginx/html:rw
+    # - /home/Maskawa/Reverse-Proxy/https/nginx/config/nginx.conf:/etc/nginx/nginx.conf/:rw
+    # - /home/Maskawa/Reverse-Proxy/https/nginx/config/conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw
+    # - /home/Maskawa/Reverse-Proxy/https/nginx/logs:/var/log/nginx/:rw
+    # - /home/Maskawa/Reverse-Proxy/https/nginx/ssl:/ssl/:rw
+    - /home/dohttps/nginx/data:/usr/share/nginx/html:rw
+    - /home/dohttps/nginx/config/nginx.conf:/etc/nginx/nginx.conf/:rw
+    - /home/dohttps/nginx/config/conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw
+    - /home/dohttps/nginx/logs:/var/log/nginx/:rw
+    - /home/dohttps/nginx/ssl:/ssl/:rw
     ports:
     - "80:80"
     - "443:443"
