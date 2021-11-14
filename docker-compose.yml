@@ -5,11 +5,11 @@ services:
     build: .
     image: nginx
     volumes:
-    - ./https/nginx/data:/usr/share/nginx/html:rw
-    - ./https/nginx/config/nginx.conf:/etc/nginx/nginx.conf/:rw
-    - ./https/nginx/config/conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw
-    - ./https/nginx/logs:/var/log/nginx/:rw
-    - ./https/nginx/ssl:/ssl/:rw
+    - ./https/nginx/data:/usr/share/nginx/html
+    - ./https/nginx/config/nginx.conf:/etc/nginx/nginx.conf/
+    - ./https/nginx/config/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+    - ./https/nginx/logs:/var/log/nginx/
+    - ./https/nginx/ssl:/ssl/
     # - /home/dohttps/nginx/data:/usr/share/nginx/html:rw
     # - /home/dohttps/nginx/config/nginx.conf:/etc/nginx/nginx.conf/:rw
     # - /home/dohttps/nginx/config/conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw
