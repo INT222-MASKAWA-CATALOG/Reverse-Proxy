@@ -9,7 +9,7 @@ services:
     - /home/Maskawa/Reverse-Proxy/https/nginx/config/nginx.conf:/etc/nginx/nginx.conf/:rw
     - /home/Maskawa/Reverse-Proxy/https/nginx/config/conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw
     - /home/Maskawa/Reverse-Proxy/https/nginx/logs:/var/log/nginx/:rw
-    - /home/Maskawa/Reverse-Proxy/https/nginx/ssl:/ssl/:rw -d nginx
+    - /home/Maskawa/Reverse-Proxy/https/nginx/ssl:/ssl/:rw
     ports:
     - "80:80"
     - "443:443"
