@@ -5,15 +5,13 @@ services:
     build: .
     image: nginx
     volumes:
-    - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    - /home/Maskawa/Reverse-Proxy/https/nginx/data:/usr/share/nginx/html:rw
+    - /home/Maskawa/Reverse-Proxy/https/nginx/config/nginx.conf:/etc/nginx/nginx.conf/:rw
+    - /home/Maskawa/Reverse-Proxy/https/nginx/config/conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw
+    - /home/Maskawa/Reverse-Proxy/https/nginx/logs:/var/log/nginx/:rw
+    - /home/Maskawa/Reverse-Proxy/https/nginx/ssl:/ssl/:rw -d nginx
     ports:
     - "80:80"
+    - "443:443"
     networks:
-      intregrated-network:
-        ipv4_address: 172.18.0.5
-
-networks:
-  intregrated-network:
-    ipam:
-      config:
-        - subnet: 172.18.0.0/16
+      intregrated-network
