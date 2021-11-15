@@ -6,9 +6,13 @@ services:
     image: nginx
     volumes:
     # - ./nginx.conf:/etc/nginx/conf.d/default.conf
-    - ./https/nginx/data:/usr/share/nginx/html:rw
+    # - ./https/nginx/data:/usr/share/nginx/html:rw
+    # - ./https/nginx/config/nginx.conf:/etc/nginx/nginx.conf/:rw
+    # - ./https/nginx/config/conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw
+    # - ./https/nginx/logs:/var/log/nginx/:rw
+    # - ./https/nginx/ssl:/ssl/:rw
     - ./https/nginx/config/nginx.conf:/etc/nginx/nginx.conf/:rw
-    - ./https/nginx/config/conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw
+    - ./https/nginx/config/conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw 
     - ./https/nginx/logs:/var/log/nginx/:rw
     - ./https/nginx/ssl:/ssl/:rw
     ports:
